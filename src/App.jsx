@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
 import { useSpring, a } from '@react-spring/web';
 import picOne from './assets/pic1.png';
 import picTwo from './assets/pic2.jpg';
+import { motion } from 'framer-motion';
 import './App.css';
 
 const App = () => {
@@ -15,17 +15,38 @@ const App = () => {
   });
 
   return (
-    <div className="w-full flex justify-center mt-[3%]" onClick={() => setFlipped(!flipped)}>
+    <motion.div className="w-full flex justify-center mt-[3%]" onClick={() => setFlipped(!flipped)}
+      initial={{
+        opacity: 0
+      }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 4.0
+        }
+      }}
+    >
       <a.div
-        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-black rounded-lg"
+        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
         style={{ opacity: opacity.to(o => 1 - o), transform }}
       >
         <div className='flex flex-col items-center justify-center gap-8 font-bold text-pk-200 h-[700px]'>
           <img src={picOne} className='w-[300px]' />
 
-          <div className='text-3xl'>
+          <motion.div className='text-4xl'
+            initial={{
+              scale: 4.0,
+              opacity: 1
+            }}
+            animate={{
+              scale: 1.0,
+              transition: {
+                duration: 1.5
+              }
+            }}
+          >
             You're Invited To
-          </div>
+          </motion.div>
 
           <div className='text-xl'>
             Jose Luis Ulloa
@@ -46,7 +67,7 @@ const App = () => {
       </a.div>
 
       <a.div
-        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-black rounded-lg"
+        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
         style={{
           opacity,
           transform,
@@ -69,7 +90,7 @@ const App = () => {
           </div>
         </div>
       </a.div>
-    </div>
+    </motion.div>
   );
 };
 
