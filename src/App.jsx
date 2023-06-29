@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useSpring, a } from '@react-spring/web';
 import picOne from './assets/pic1.png';
+import picTwo from './assets/pic2.jpg';
 import './App.css';
 
 const App = () => {
@@ -14,31 +15,31 @@ const App = () => {
   });
 
   return (
-    <div className="w-full h-screen flex items-center justify-center" onClick={() => setFlipped(!flipped)}>
+    <div className="w-full flex justify-center mt-[3%]" onClick={() => setFlipped(!flipped)}>
       <a.div
         className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-black rounded-lg"
         style={{ opacity: opacity.to(o => 1 - o), transform }}
       >
-        <div className='flex flex-col justify-center items-center gap-8'>
-          <img src={picOne} />
+        <div className='flex flex-col items-center justify-center gap-8 font-bold text-pk-200 h-[700px]'>
+          <img src={picOne} className='w-[300px]' />
 
-          <div className='text-3xl font-bold text-pk-200'>
+          <div className='text-3xl'>
             You're Invited To
           </div>
 
-          <div className='text-xl font-bold text-pk-200'>
+          <div className='text-xl'>
             Jose Luis Ulloa
           </div>
 
-          <div className='text-xl font-bold text-pk-200'>
+          <div className='text-xl'>
             &
           </div>
 
-          <div className='text-xl font-bold text-pk-200'>
+          <div className='text-xl'>
             Mariela Aparicio's
           </div>
 
-          <div className='text-xl font-bold text-pk-200'>
+          <div className='text-xl'>
             Babyshower!
           </div>
         </div>
@@ -52,7 +53,21 @@ const App = () => {
           rotateX: '180deg',
         }}
       >
-        Bye
+        <div className='flex flex-col items-start m-[10%] gap-8 font-bold text-pk-200 h-[700px]'>
+          <img src={picTwo} className='w-[300px]' />
+
+          <div className='text-xl'>
+            Date: 22nd of July
+          </div>
+
+          <div className='text-xl'>
+            Time: 2:00 P.M.
+          </div>
+
+          <div className='text-xl'>
+            Where: 3896 Egypt Rd, Snellville, GA. 30039 
+          </div>
+        </div>
       </a.div>
     </div>
   );
