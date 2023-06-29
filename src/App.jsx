@@ -27,10 +27,10 @@ const App = () => {
       }}
     >
       <a.div
-        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
+        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[600px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
         style={{ opacity: opacity.to(o => 1 - o), transform }}
       >
-        <div className='flex flex-col items-center justify-center gap-8 font-bold text-pk-200 h-[700px]'>
+        <div className='flex flex-col items-center justify-center gap-6 font-bold text-pk-200 h-[600px]'>
           <img src={picOne} className='w-[300px]' />
 
           <motion.div className='text-4xl'
@@ -49,7 +49,7 @@ const App = () => {
           </motion.div>
 
           <div className='text-xl'>
-            Jose Luis Ulloa
+            Mariela Aparicio
           </div>
 
           <div className='text-xl'>
@@ -57,7 +57,7 @@ const App = () => {
           </div>
 
           <div className='text-xl'>
-            Mariela Aparicio's
+            Jose Luis Ulloa's
           </div>
 
           <div className='text-xl'>
@@ -67,14 +67,14 @@ const App = () => {
       </a.div>
 
       <a.div
-        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[700px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
+        className="absolute max-w-[500px] max-h-[800px] w-[350px] h-[600px] cursor-pointer will-change-transform border-2 border-pk-200 rounded-lg"
         style={{
           opacity,
           transform,
           rotateX: '180deg',
         }}
       >
-        <div className='flex flex-col items-start m-[10%] gap-8 font-bold text-pk-200 h-[700px]'>
+        <div className='flex flex-col items-start m-[10%] gap-8 font-bold text-pk-200 h-[600px]'>
           <img src={picTwo} className='w-[300px]' />
 
           <div className='text-xl'>
