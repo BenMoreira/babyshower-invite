@@ -64,6 +64,10 @@ const App = () => {
             Babyshower!
           </div>
         </div>
+
+        <div className='text-sm text-center p-2 text-pk-200'>
+          Tap for more information
+        </div>
       </a.div>
 
       <a.div
